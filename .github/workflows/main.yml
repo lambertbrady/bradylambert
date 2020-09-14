@@ -15,8 +15,8 @@ jobs:
       with:
         node-version: '12.x'
     - run: |
-        git config --local user.email "${{github.actor}}@users.noreply.github.com"
-        git config --local user.name "${{github.actor}}"
+        git config --global user.email "${{github.actor}}@users.noreply.github.com"
+        git config --global user.name "${{github.actor}}"
     - run: |
         npm install
         npm run deploy
