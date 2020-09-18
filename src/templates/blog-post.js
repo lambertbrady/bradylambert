@@ -27,7 +27,7 @@ function BlogPostTemplate({ data, pageContext }) {
             <Heading as="h1">{post.frontmatter.title}</Heading>
             <Text sx={{ fontSize: 16 }}>{post.frontmatter.date}</Text>
           </Box>
-          <Box as={MDXRenderer}>{post.body}</Box>
+          <MDXRenderer frontmatter={post.frontmatter}>{post.body}</MDXRenderer>
         </Box>
         <Divider
           sx={{

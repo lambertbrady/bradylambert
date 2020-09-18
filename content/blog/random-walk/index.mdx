@@ -1,0 +1,15 @@
+---
+title: Random Walk
+date: 2020-09-06
+category: code
+description: Test of p5.js component using random walk sketch.
+---
+
+import P5Dynamic from '../../../src/components/p5-dynamic'
+import sketch from './sketch-random-walk'
+
+<p>{props.frontmatter.description}</p>
+
+Click the sketch to pause and play the loop.
+
+<P5Dynamic sketch={sketch} sx={{ border: '4px solid gray' }} />
