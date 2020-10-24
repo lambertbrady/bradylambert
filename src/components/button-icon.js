@@ -4,21 +4,20 @@ import { Box, Button } from 'theme-ui'
 
 const ButtonIcon = React.forwardRef(
   ({ icon, iconPosition = 'left', sx, ...rest }, ref) => {
-    const sxButton = {
-      columnGap: 3,
-      ...(iconPosition === 'right' && { flexDirection: 'row-reverse' })
-    }
-    const sxIcon = {
-      m: -1,
-      width: 5,
-      height: 5,
-      flex: 'none'
-    }
-
     return (
-      <Button ref={ref} {...rest} sx={{ ...sxButton, ...sx }}>
-        <Box as={icon} sx={{ ...sxIcon }} />
-        {rest.children}
+      <Button
+        ref={ref}
+        {...rest}
+        sx={{
+          columnGap: 3,
+          ...(iconPosition === 'right' && { flexDirection: 'row-reverse' }),
+          ...sx
+        }}
+      >
+        <Box as={icon} sx={{ m: -1, width: 5, height: 5, flex: 'none' }} />
+        <Box as="span" sx={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>
+          {rest.children}
+        </Box>
       </Button>
     )
   }
