@@ -23,7 +23,7 @@ jobs:
           git remote set-url origin "https://${{github.actor}}:${{github.token}}@github.com/${{github.repository}}.git/"
 
       - name: Install
-        run: npm install
+        run: yarn add
 
       - name: Build and Deploy
-        run: npm run deploy
+        run: yarn run deploy

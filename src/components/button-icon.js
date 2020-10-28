@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import { Box, Button } from 'theme-ui'
 
-const ButtonIcon = React.forwardRef(
+const ButtonIcon = forwardRef(
   ({ icon, iconPosition = 'left', sx, ...rest }, ref) => {
     return (
       <Button

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { graphql, useStaticQuery, Link as GatsbyLink } from 'gatsby'
 import GatsbyImage from 'gatsby-image'
@@ -13,7 +13,7 @@ function Layout({ pageSEO = {}, children }) {
   const constrainRange = [4, 6]
 
   return (
-    <React.Fragment>
+    <Fragment>
       <SEO {...pageSEO} />
       <Grid
         gap={10}
@@ -93,7 +93,7 @@ function Layout({ pageSEO = {}, children }) {
           {`!`}
         </Box>
       </Grid>
-    </React.Fragment>
+    </Fragment>
   )
 }
 
